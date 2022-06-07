@@ -1,6 +1,6 @@
 import ShuffleIcon from '@mui/icons-material/Shuffle'
 import SearchIcon from '@mui/icons-material/Search'
-import { List, ListAction, Text, ItemAction, Image, app, post } from '@List'
+import { List, ListAction, Text, EntityAction, Image, app, post } from '@List'
 
 const listActions = (itemIds) => {
 
@@ -71,7 +71,7 @@ const row = (item) => <>
     <td>{item.name}</td>
 </>
 
-const itemActions = (item) => {
+const entityActions = (item) => {
     const setRandomDefaultImage = ({ setProgress, setItem }) => {
         setProgress(true)
         post(`/entityType/setRandomDefaultImage?id=${item.id}`)
@@ -86,7 +86,7 @@ const itemActions = (item) => {
     }
 
     return <>
-        <ItemAction
+        <EntityAction
             title='Set random default image'
             icon={ShuffleIcon}
             click={(params) => setRandomDefaultImage(params)}
@@ -104,7 +104,7 @@ const EntityTypes = () => {
         filters={filters}
         headers={headers}
         row={row}
-        itemActions={itemActions}
+        entityActions={entityActions}
     />
 }
 

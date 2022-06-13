@@ -62,7 +62,7 @@ const headers = <>
 </>
 
 const row = (item) => <>
-    <td>
+    <td start={true}>
         <Image
             url={item.relatedItems.defaultImageUrl}
             uploadUrl={`/entityType/setImage?entityTypeId=${item.id}`}

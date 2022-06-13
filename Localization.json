@@ -2,7 +2,13 @@
     {
         "locale": "fa",
         "translations": {
-            "Entity Types": "نوع موجودها"
+            "Entity Types": "نوع موجودها",
+            "Find All": "یافتن همه",
+            "Set Random Images": "اختصاص عکس تصادفی",
+            "Default Image": "تصویر پیش فرض",
+            "Set random default image": "اختصاص عکس پیش فرض تصادفی",
+            "Random images would be set as default images for the selected entity types": "برای نوع موجودها، عکس هایی تصادفی به عنوان عکس پیش فرض قرار داده خواهد شد",
+            "Finds all entity types existing in this software instance": "تمام نوع موجودهای این نرم افزار را پیدا میکند"
         }
     }
 ]

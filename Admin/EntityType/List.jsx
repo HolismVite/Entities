@@ -57,7 +57,7 @@ const filters = <>
 </>
 
 const headers = <>
-    <td className="text-left">Default image</td>
+    <td start={true}>Default image</td>
     <th>Name</th>
 </>
 

@@ -57,12 +57,12 @@ const filters = <>
 </>
 
 const headers = <>
-    <td start={true}>Default image</td>
+    <td start>Default image</td>
     <th>Name</th>
 </>
 
 const row = (item) => <>
-    <td start={true}>
+    <td start>
         <Image
             url={item.relatedItems.defaultImageUrl}
             uploadUrl={`/entityType/setImage?entityTypeId=${item.id}`}

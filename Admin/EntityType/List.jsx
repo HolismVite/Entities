@@ -4,27 +4,37 @@ import { List, ListAction, Text, EntityAction, Image, app, post } from '@List'
 
 const listActions = (itemIds) => {
 
-    const findAll = ({ setProgress, reloadList }) => {
+    const findAll = ({
+        error,
+        reloadList,
+        setProgress,
+        success,
+    }) => {
         setProgress(true)
         post('/entityType/findAll').then(data => {
-            app.success('Found all entity types')
+            success('Found all entity types')
             setProgress(false)
             reloadList()
-        }, error => {
-            app.error(error)
+        }, e => {
+            error(e)
             setProgress(false)
             reloadList()
         })
     }
 
-    const setRandomDefaultImages = ({ setProgress, reloadList }) => {
+    const setRandomDefaultImages = ({
+        error,
+        reloadList,
+        setProgress,
+        success,
+    }) => {
         setProgress(true)
         post('/entityType/setRandomDefaultImages', itemIds).then(data => {
-            app.success('Random default images are set')
+            success('Random default images are set')
             setProgress(false)
             reloadList()
-        }, error => {
-            app.error(error)
+        }, e => {
+            error(e)
             setProgress(false)
             reloadList()
         })
@@ -72,15 +82,20 @@ const row = (item) => <>
 </>
 
 const entityActions = (item) => {
-    const setRandomDefaultImage = ({ setProgress, setItem }) => {
+    const setRandomDefaultImage = ({
+        error,
+        setEntity,
+        setProgress,
+        success,
+    }) => {
         setProgress(true)
         post(`/entityType/setRandomDefaultImage?id=${item.id}`)
             .then(data => {
-                app.success('Random default image is set')
+                success('Random default image is set')
                 setProgress(false)
-                setItem(data)
-            }, error => {
-                app.error(error)
+                setEntity(data)
+            }, e => {
+                error(e)
                 setProgress(false)
             })
     }

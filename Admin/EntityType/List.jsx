@@ -67,7 +67,7 @@ const filters = <>
 </>
 
 const headers = <>
-    <td start>Default image</td>
+    <th start>Default image</th>
     <th>Name</th>
 </>
 

@@ -1,4 +1,4 @@
-import { EntityTypes } from './EntityType/List'
+import EntityTypes from './EntityType/List'
 import FingerprintIcon from '@mui/icons-material/Fingerprint';
 
 const EntitiesRoutes = [
@@ -18,5 +18,5 @@ const EntitiesMenu = [
     }
 ]
 
-export { EntitiesRoutes }
 export { EntitiesMenu }
+export { EntitiesRoutes }

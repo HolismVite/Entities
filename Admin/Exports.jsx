@@ -1,5 +1,6 @@
-import FingerprintIcon from '@mui/icons-material/Fingerprint';
-import EntityTypeBrowser from './EntityType/BrowserField';
+import FingerprintIcon from '@mui/icons-material/Fingerprint'
+import EntityTypeBrowserField from './EntityType/BrowserField'
+import EntityTypeBrowserFilter from './EntityType/BrowserFilter'
 import EntityTypes from './EntityType/List'
 
 const EntitiesRoutes = [
@@ -19,6 +20,7 @@ const EntitiesMenu = [
     }
 ]
 
-export { EntityTypeBrowser }
+export { EntityTypeBrowserField }
+export { EntityTypeBrowserFilter }
 export { EntitiesMenu }
 export { EntitiesRoutes }

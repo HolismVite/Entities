@@ -124,4 +124,3 @@ const EntityTypes = () => {
 }
 
 export default EntityTypes
-export { EntityTypes }

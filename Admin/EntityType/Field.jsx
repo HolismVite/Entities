@@ -1,11 +1,9 @@
 import { Browse } from '@Form';
 import EntityTypeBrowseList from './BrowseList';
 
-const EntityTypeField = ({
-    column
-}) => {
+const EntityTypeField = () => {
     return <Browse
-        column={column || 'EntityTypeGuid'}
+        column='EntityTypeGuid'
         list={EntityTypeBrowseList}
         placeholder='Entity type'
         show={(item) => item.name}

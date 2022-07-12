@@ -1,16 +1,16 @@
 import { Browse } from '@List';
-import EntityTypeBrowseList from './BrowseList';
+import { headers, row } from './BrowseList'
 
-const EntityTypeFilter = ({
-    column
-}) => {
+const EntityTypeFilter = () => {
     return <Browse
-        column={column || 'EntityTypeGuid'}
-        list={EntityTypeBrowseList}
+        entityType='EntityType'
+        column='EntityTypeGuid'
         placeholder='Entity type'
+        required='You should choose an entity type'
+        headers={headers}
+        row={row}
         show={(item) => item.name}
         choose={(item) => item.guid}
-        required='You should choose an entity type'
     />
 }
 

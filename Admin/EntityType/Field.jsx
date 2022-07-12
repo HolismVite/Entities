@@ -3,14 +3,14 @@ import { headers, row } from './BrowseList'
 
 const EntityTypeField = () => {
     return <Browse
-        column='EntityTypeGuid'
         entityType='EntityType'
+        column='EntityTypeGuid'
+        placeholder='Entity type'
+        required='You should choose an entity type'
         headers={headers}
         row={row}
-        placeholder='Entity type'
         show={(item) => item.name}
         choose={(item) => item.guid}
-        required='You should choose an entity type'
     />
 }
 

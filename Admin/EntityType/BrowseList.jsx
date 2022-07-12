@@ -1,4 +1,4 @@
-import { List, Image } from '@Browse';
+import { Image } from '@Browse';
 
 const headers = <>
     <th start>Default image</th>

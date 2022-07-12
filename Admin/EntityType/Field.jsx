@@ -1,10 +1,12 @@
 import { Browse } from '@Form';
-import EntityTypeBrowseList from './BrowseList';
+import { headers, row } from './BrowseList'
 
 const EntityTypeField = () => {
     return <Browse
         column='EntityTypeGuid'
-        list={EntityTypeBrowseList}
+        entityType='EntityType'
+        headers={headers}
+        row={row}
         placeholder='Entity type'
         show={(item) => item.name}
         choose={(item) => item.guid}

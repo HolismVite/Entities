@@ -14,10 +14,5 @@ const row = (item) => <>
     <td>{item.name}</td>
 </>
 
-const EntityTypeBrowseList = <List
-    entityType='EntityType'
-    headers={headers}
-    row={row}
-/>
-
-export default EntityTypeBrowseList
+export { headers }
+export { row }

@@ -24,7 +24,7 @@ const EntityTypeBrowser = ({
         column={column || 'EntityTypeGuid'}
         browser={BrowserDialog}
         placeholder='Entity type'
-        display={(item) => item.name}
+        show={(item) => item.name}
         choose={(item) => item.guid}
         required='You should choose an entity type'
     />

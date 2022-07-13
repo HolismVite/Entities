@@ -1,4 +1,10 @@
-import { Image } from '@Browse';
+import { Image, Text } from '@List';
+
+const filters = <>
+    <Text
+        column='Name'
+    />
+</>
 
 const headers = <>
     <th start>Default image</th>
@@ -14,5 +20,6 @@ const row = (item) => <>
     <td>{item.name}</td>
 </>
 
+export { filters }
 export { headers }
 export { row }

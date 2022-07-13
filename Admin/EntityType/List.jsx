@@ -66,6 +66,14 @@ const filters = <>
     />
 </>
 
+const sorts = [
+    {
+        "caption": "A-Z",
+        "column": "Name",
+        "direction": "asc"
+    }
+]
+
 const headers = <>
     <th start>Default image</th>
     <th>Name</th>
@@ -117,6 +125,7 @@ const EntityTypes = () => {
         entityType='entityType'
         listActions={listActions}
         filters={filters}
+        sorts={sorts}
         headers={headers}
         row={row}
         entityActions={entityActions}

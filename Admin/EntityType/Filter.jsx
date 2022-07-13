@@ -1,5 +1,10 @@
 import { Browse } from '@List';
-import { filters, headers, row } from './BrowseList'
+import {
+    filters,
+    headers,
+    row,
+    sorts,
+} from './BrowseList'
 
 const EntityTypeFilter = () => {
     return <Browse
@@ -8,6 +13,7 @@ const EntityTypeFilter = () => {
         placeholder='Entity type'
         required='You should choose an entity type'
         filters={filters}
+        sorts={sorts}
         headers={headers}
         row={row}
         show={(item) => item.name}

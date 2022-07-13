@@ -1,10 +1,21 @@
-import { Image, Text } from '@List';
+import {
+    Image,
+    Text,
+} from '@List';
 
 const filters = <>
     <Text
         column='Name'
     />
 </>
+
+const sorts = [
+    {
+        "caption": "A-Z",
+        "column": "Name",
+        "direction": "asc"
+    }
+]
 
 const headers = <>
     <th start>Default image</th>
@@ -23,3 +34,4 @@ const row = (item) => <>
 export { filters }
 export { headers }
 export { row }
+export { sorts }

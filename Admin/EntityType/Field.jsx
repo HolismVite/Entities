@@ -1,5 +1,10 @@
 import { Browse } from '@Form';
-import { headers, row } from './BrowseList'
+import {
+    filters,
+    headers,
+    row,
+    sorts,
+} from './BrowseList'
 
 const EntityTypeField = () => {
     return <Browse
@@ -7,6 +12,8 @@ const EntityTypeField = () => {
         column='EntityTypeGuid'
         placeholder='Entity type'
         required='You should choose an entity type'
+        filters={filters}
+        sorts={sorts}
         headers={headers}
         row={row}
         show={(item) => item.name}
